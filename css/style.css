@@ -1,16 +1,18 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
+    font-family: Arial, sans-serif; /* Fonte limpa e legível */
+    background-color: #f9f9f9; /* Fundo claro */
+    margin: 0; /* Remove margens padrão */
 }
 
-header,
+/* Layout básico */
+header, 
 nav,
 section,
 footer {
     padding: 20px;
-}
+} /* Espaçamento interno */
 
+/* Estilização do cabeçalho */
 nav ul {
     list-style: none;
     display: flex;
@@ -39,4 +41,55 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
+}
+
+/*cards*/
+.card-container {
+    display: flex; /* Layout flexível */
+    flex-wrap: wrap; /* Permite que os cards quebrem linha */
+    gap: 24px; /* Espaçamento entre os cards */
+    justify-content: center; /* Centraliza os cards */
+}
+
+.card {
+    position: relative;
+    /* Para a badge */
+    flex: 1 1 350px; /* Flexível, mas com tamanho mínimo de 350px */
+    max-width: 450px; /* Tamanho máximo de 450px */
+    background: #fff; /* Fundo branco */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 12px; /* Espaçamento interno */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06); /* Sombra suave */
+}
+
+.card h3 {
+    margin-top: 0; /* Remove margem superior */
+    color: #003366; /* Cor do título */
+}
+
+.card p {
+    margin: 5px 0; /* Margem vertical */
+    color: #333; /* Cor do texto */
+}
+
+.badge {
+    position: absolute; /* Posição absoluta */
+    top: 90px; /* Distância do topo */
+    right: 15px; /* Distância da direita */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 20px; /* Bordas arredondadas */
+    font-size: 0.8em; /* Tamanho da fonte menor */
+    color: #fff; /* Cor do texto branco */
+}
+
+.badge.palestra {
+    background-color: #007bff; /* Azul */
+}
+
+.badge.workshop {
+    background-color: #f0ad4e; /* Laranja */
+}
+
+card i {
+    background-color: #555; /* Cinza escuro */
 }
