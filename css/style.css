@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif; /* Fonte limpa e legível */
     background-color: #f9f9f9; /* Fundo claro */
     margin: 0; /* Remove margens padrão */
+    padding-top: 60px; /* Espaço para a navegação fixa */
 }
 
 /* Layout básico */
@@ -14,14 +15,14 @@ footer {
 
 /* Estilização do cabeçalho */
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    list-style: none;  /* Remove marcadores */
+    display: flex; /* Layout flexível */
+    gap: 20px; /* Espaçamento entre os itens */
 }
 
 nav a {
-    text-decoration: none;
-    color: #003366;
+    text-decoration: none; /* Remove sublinhado */
+    color: #003366; /* Azul escuro */
 }
 
 h1,
@@ -37,10 +38,10 @@ section {
 }
 
 nav {
-    background-color: #eee;
-    position: fixed;
-    top: 0;
-    width: 100%;
+    background-color: #eee; /* Fundo cinza claro */
+    position: fixed;   /* Fixa a navegação no topo */
+    top: 0;         /* Alinha ao topo */
+    width: 100%; /* Largura total */
 }
 
 /*cards*/
@@ -92,4 +93,26 @@ nav {
 
 card i {
     background-color: #555; /* Cinza escuro */
+}
+
+img {
+    transition: transform 0.3s ease; /* Transição suave para o efeito hover */
+}
+
+img:hover {
+    transform: scale(1.05); /* Aumenta a imagem em 5% ao passar o mouse */
+}
+
+.card-img {
+    width: 100%; /* Largura total do card */
+    height: 300px; /* Altura fixa */
+    object-fit: contain; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Bordas arredondadas */
+    display: block; /* Remove espaço embaixo da imagem */
+    align-items: first; /* Alinha a imagem ao topo */
+}
+
+.h3-img {
+    text-align: center; /* Centraliza o título */
+    padding: .5em; /* Espaçamento interno */
 }
