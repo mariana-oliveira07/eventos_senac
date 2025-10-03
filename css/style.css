@@ -149,7 +149,7 @@ img:hover {
   justify-content: center; /* Centraliza cards na linha */
 }
 
-.card {
+.card { 
   position: relative;      /* Necessário para posicionar a badge */
   flex: 1 1 350px;         /* Cresce, diminui, largura base */
   max-width: 450px;
@@ -170,7 +170,7 @@ img:hover {
 }
 
 /* Badge (etiqueta sobre a imagem) */
-.badge {
+.badge { 
   position: absolute;
   top: 90px;
   right: 15px;
@@ -180,7 +180,7 @@ img:hover {
   color: #fff;
 }
 
-.badge.palestra {
+.badge.palestra {  
   background-color: #007bff; /* Azul médio */
 }
 
@@ -188,7 +188,7 @@ img:hover {
   background-color: #ff6600; /* Laranja destaque */
 }
 
-.card i {
+.card i { /* Estilo do ícone de localização */
   margin-right: 5px;
   color: #555;
 }
@@ -196,7 +196,7 @@ img:hover {
 /* ==========================
    FORMULÁRIO
    ========================== */
-.formulario {
+.formulario { /* Estilo do formulário */
   max-width: 400px;
   margin: 40px auto;
   padding: 20px;
@@ -205,7 +205,7 @@ img:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.formulario label {
+.formulario label { /* Estilo dos labels do formulario */
   display: block;
   margin-bottom: 6px;
   font-weight: bold;
@@ -213,7 +213,7 @@ img:hover {
 }
 
 .formulario input,
-.formulario select {
+.formulario select { /* Estilo dos campos do formulario */
   width: 95%;
   padding: 10px;
   margin-bottom: 16px;
@@ -224,13 +224,13 @@ img:hover {
 }
 
 .formulario input:focus,
-.formulario select:focus {
+.formulario select:focus { /* Efeito de foco no formulario */
   outline: none;
   border-color: #007BFF; /* Azul de foco */
   box-shadow: 0 0 5px rgba(0,123,255,0.4);
 }
 
-.formulario button {
+.formulario button { /* Estilo do botão do formulario */
   width: 100%;
   padding: 12px;
   background: #ff6600; /* Laranja destaque */
@@ -243,14 +243,14 @@ img:hover {
   transition: background 0.3s; /* Animação do fundo no hover */
 }
 
-.formulario button:hover {
+.formulario button:hover { /* Efeito hover no formulario */
   background: #cc5200; /* Laranja mais escuro no hover */
 }
 
 /* ==========================
    RODAPÉ
    ========================== */
-.footer {
+.footer { /* Estilo do rodapé */
   background-color: #003366; /* Azul escuro institucional */
   color: #fff;
   text-align: center;
@@ -258,21 +258,21 @@ img:hover {
   font-size: 14px;
   position: fixed;    /* Fica sempre visível no rodapé */
   bottom: 0;
-  left: 0;
+  left: 0; /* Alinha à esquerda */
   width: 100%;
   box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
 }
 
-.footer p {
-  margin: 0;
-  letter-spacing: 0.5px;
+.footer p { /* Estilo do texto do rodapé */
+  margin: 0; /* Remove margem padrão */
+  letter-spacing: 0.5px; /* Espaçamento entre letras */
 }
 
 /* ==========================
    RESPONSIVIDADE
    ========================== */
-@media (max-width: 600px) {
-  nav ul {
+@media (max-width: 600px) { /* Ajustes para telas pequenas */
+  nav ul { /* Estilo do menu no mobile */
     flex-direction: column;   /* Menu vira lista vertical */
     align-items: center;      /* Centraliza links no mobile */
   }
@@ -282,19 +282,30 @@ img:hover {
    BUTTONS INSCRICAÇÃO
    ========================== */
 
-.prins {
-  display: incline-block;
-  width: 10%;
-  padding: 5px;
+.prins { /* Classe para o botão de inscrição */
+  display: incline-block; /* Exibe como bloco inline */
+  width: 100%; /* Ocupa toda a largura do card */
+  padding: 5px; /* Espaçamento interno */
   background: #ff6600; /* Laranja destaque */
   color: white; /* Texto branco */
-  text-align: center;
-  text-decoration: none;
+  text-align: center; /* Centraliza o texto */
+  text-decoration: none; /* Remove sublinhado */
   border-radius: 63px; /* Bordas arredondadas */
   font-size: bold; /* Negrito */
-  cursor: pointer;
+  cursor: pointer; /* Cursor de mãozinha */
 }
 
-.prins:hover {
-  background: #cc5200; /* Laranja mais escuro no hover */
+/* ==========================
+   uso do active no menu
+   ========================== */
+
+nav ul li a.active { /* Estilo para o link ativo */
+    background: #d47e0e; /* Laranja mais escuro */
+    color: gray; /* Texto cinza */
+    font-weight: bold; /* Negrito */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 6px 12px; /* Espaçamento interno */
 }
+
+/* rgb 00 red 00 green 00 blue 0.0 to 1.0 opacidade */
+
