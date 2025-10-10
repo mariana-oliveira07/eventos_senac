@@ -309,3 +309,43 @@ nav ul li a.active { /* Estilo para o link ativo */
 
 /* rgb 00 red 00 green 00 blue 0.0 to 1.0 opacidade */
 
+/* ==========================
+   EVENTO PASSADO
+   ========================== */
+
+.btn-inscrever-passado {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+/* Card de evento encerrado */
+.card.evento-passado {
+  opacity: 0.7; /* Deixa o card mais claro */
+  filter: grayscale(0.3); /* Aplica um leve efeito de escala de cinza */
+}
+
+.btn-inscrever:hover {
+  background-color: #cc5200; /* Laranja mais escuro no hover */
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.badge.seminario {
+  background-color: #28a745; /* Verde */
+}
+
+.badge.mesa-redonda {
+  background-color: #6f42c1; /* Roxo */
+}
+
+.badge.oficina {
+  background-color: #e83e8c; /* Rosa forte */
+}
+
+.badge.tipo-nao-informado {
+  background-color: #6c757d; /* Cinza escuro */
+}
+
+
