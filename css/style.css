@@ -348,4 +348,68 @@ nav ul li a.active { /* Estilo para o link ativo */
   background-color: #6c757d; /* Cinza escuro */
 }
 
+/* ======= SEÇÃO DE CONTATO ======= */
+#contato {
+  background-color: #1E4B87;
+  color: white;
+  padding: 50px 30px;
+}
 
+#contato h2 {
+  border-left: 5px solid #F37021; /* Laranja Senac */
+  padding-left: 10px;
+  margin-bottom: 30px;
+  font-size: 1.8em;
+}
+
+#contato .contato-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+#contato .contato-info {
+  flex: 1 1 280px;
+  font-size: 1.1em;
+}
+
+#contato .contato-info p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+#contato .contato-info i {
+  color: #F37021;
+  margin-right: 8px;
+}
+
+#contato .contato-info a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#contato .contato-info a:hover {
+  color: #F37021;
+}
+
+#contato .contato-mapa {
+  flex: 2 1 400px;
+}
+
+#contato .contato-mapa iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+  #contato .contato-container {
+    flex-direction: column;
+  }
+  #contato .contato-mapa iframe {
+    height: 250px;
+  }
+}
