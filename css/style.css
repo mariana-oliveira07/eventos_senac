@@ -4,24 +4,14 @@
 body {
   background-color: #f9f9f9;
   margin: 0;
-  padding-top: 80px; /* Espaço para não esconder o conteúdo atrás do menu fixo */
+  padding-top: 80px;
+  /* Espaço para não esconder o conteúdo atrás do menu fixo */
   font-family: Arial, sans-serif;
 }
 
-nav,
 section,
 footer {
   padding: 20px;
-}
-
-h1 {
-  width: 80%;
-  margin: 20px auto;
-}
-
-h1,
-h2 {
-  color: #003366; /* Azul escuro institucional */
 }
 
 /* ==========================
@@ -29,7 +19,8 @@ h2 {
    ========================== */
 h1 {
   font-size: 2.4rem;
-  color: #003366;             /* azul institucional */
+  color: #003366;
+  /* azul institucional */
   text-align: center;
   margin: 40px auto 20px;
   position: relative;
@@ -41,10 +32,10 @@ h1 {
 h1::after {
   content: "";
   display: block;
-  width: 80px;                /* comprimento da linha */
-  height: 4px;                /* espessura */
+  width: 80px;
+  height: 4px;
   background: linear-gradient(90deg, #003366, #ff6600);
-  margin: 10px auto 0;
+  margin: 0 auto 0;
   border-radius: 2px;
 }
 
@@ -57,30 +48,36 @@ section h2 {
   text-align: left;
   margin: 20px 0;
   padding-left: 12px;
-  border-left: 6px solid #ff6600; /* barra laranja de destaque */
+  border-left: 6px solid #ff6600;
+  /* barra laranja de destaque */
   font-weight: bold;
   letter-spacing: 0.5px;
 }
 
 section h3 {
   font-size: 1.3rem;
-  color: #007bff; /* azul médio para subtítulos */
+  color: #007bff;
+  /* azul médio para subtítulos */
   margin: 15px 0 10px;
   font-weight: bold;
 }
-
 
 /* ==========================
    MENU DE NAVEGAÇÃO
    ========================== */
 nav {
-  background-color: #003366; /* Azul institucional */
-  position: fixed;           /* Fixa no topo da tela */
+  background-color: #003366;
+  position: fixed;
+  /* sempre no topo */
   top: 0;
   width: 100%;
-  z-index: 1000;             /* Garante que fique sobre outros elementos */
-  padding: 40px;
-  font-weight: bold;
+  height: 100px;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
 nav ul {
@@ -93,14 +90,43 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #fff;     /* Links brancos sobre fundo azul */
+  color: #fff;
+  font-weight: 500;
   padding: 10px;
-  font-size: 1.25rem;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #ff6600;  /* Laranja de destaque no hover */
+  color: #ff6600;
+}
+
+/* Botão hambúrguer (visível apenas no mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.active {
+  color: #ff6600;
+}
+
+.active:hover {
+  color: #fff;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+/* Estilo para o logotipo */
+nav ul li img {
+  height: 80px;
+  width: auto;
+  margin-right: 10px;
 }
 
 /* ==========================
@@ -108,7 +134,7 @@ nav a:hover {
    ========================== */
 section {
   width: 80%;
-  margin: 20px auto;
+  margin: 60px auto;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -123,15 +149,15 @@ img {
 }
 
 img:hover {
-  transform: scale(1.50); /* Efeito zoom leve */
+  transform: scale(1.05);
 }
 
 .card-img {
-  width: 100%;            
-  height: 300px;          
-  object-fit: contain;    /* Mantém a proporção da imagem */
-  border-radius: 8px;     
-  display: block;         
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
 }
 
 .h3-img {
@@ -144,19 +170,19 @@ img:hover {
    ========================== */
 .cards-container {
   display: flex;
-  flex-wrap: wrap;         /* Quebra linha se não couber */
-  gap: 24px;               /* Espaçamento entre os cards */
-  justify-content: center; /* Centraliza cards na linha */
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
 }
 
-.card { 
-  position: relative;      /* Necessário para posicionar a badge */
-  flex: 1 1 350px;         /* Cresce, diminui, largura base */
+.card {
+  position: relative;
+  flex: 1 1 350px;
   max-width: 450px;
   background: #fff;
   border-radius: 10px;
   padding: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06); /* Sombra leve */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .card h3 {
@@ -170,9 +196,9 @@ img:hover {
 }
 
 /* Badge (etiqueta sobre a imagem) */
-.badge { 
+.badge {
   position: absolute;
-  top: 90px;
+  bottom: 20px;
   right: 15px;
   padding: 5px 10px;
   border-radius: 20px;
@@ -180,140 +206,76 @@ img:hover {
   color: #fff;
 }
 
-.badge.palestra {  
-  background-color: #007bff; /* Azul médio */
+.badge.palestra {
+  background-color: #007bff;
 }
 
 .badge.workshop {
-  background-color: #ff6600; /* Laranja destaque */
+  background-color: #ff6600;
 }
 
-.card i { /* Estilo do ícone de localização */
+.badge.oficina {
+  background-color: #da6b21;
+}
+
+.badge.painel {
+  background-color: #2035ee;
+}
+
+.badge.seminário {
+  background-color: #2f3dc0;
+}
+
+.card i {
   margin-right: 5px;
   color: #555;
 }
 
-/* ==========================
-   FORMULÁRIO
-   ========================== */
-.formulario { /* Estilo do formulário */
-  max-width: 400px;
-  margin: 40px auto;
+/* Botão Inscreva-se */
+/* Card ajustado para botão no rodapé */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 20px;
+  border-radius: 10px;
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  min-height: 180px;
+  /* garante altura mínima */
 }
 
-.formulario label { /* Estilo dos labels do formulario */
-  display: block;
-  margin-bottom: 6px;
-  font-weight: bold;
-  color: #003366;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.formulario input,
-.formulario select { /* Estilo dos campos do formulario */
-  width: 95%;
-  padding: 10px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 14px;
-  transition: border-color 0.3s; /* Animação da borda no foco */
-}
-
-.formulario input:focus,
-.formulario select:focus { /* Efeito de foco no formulario */
-  outline: none;
-  border-color: #007BFF; /* Azul de foco */
-  box-shadow: 0 0 5px rgba(0,123,255,0.4);
-}
-
-.formulario button { /* Estilo do botão do formulario */
-  width: 100%;
-  padding: 12px;
-  background: #ff6600; /* Laranja destaque */
-  color: white; /* Texto branco */
-  border: none; /* Remove borda padrão */
-  border-radius: 8px; /* Bordas arredondadas */
-  font-size: 16px; /* Tamanho da fonte */
-  font-weight: bold; /* Negrito */
-  cursor: pointer; /* Cursor de mãozinha */
-  transition: background 0.3s; /* Animação do fundo no hover */
-}
-
-.formulario button:hover { /* Efeito hover no formulario */
-  background: #cc5200; /* Laranja mais escuro no hover */
-}
-
-/* ==========================
-   RODAPÉ
-   ========================== */
-.footer { /* Estilo do rodapé */
-  background-color: #003366; /* Azul escuro institucional */
-  color: #fff;
+/* Botão Inscreva-se */
+.btn-inscrever {
+  margin-top: auto;
+  /* empurra para baixo */
+  align-self: start;
+  /* centraliza no card */
+  display: inline-block;
+  /* width: 50%; */
   text-align: center;
-  padding: 15px 10px;
-  font-size: 14px;
-  position: fixed;    /* Fica sempre visível no rodapé */
-  bottom: 0;
-  left: 0; /* Alinha à esquerda */
-  width: 100%;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+  padding: 10px 20px;
+  background: #0077b6;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-.footer p { /* Estilo do texto do rodapé */
-  margin: 0; /* Remove margem padrão */
-  letter-spacing: 0.5px; /* Espaçamento entre letras */
+.btn-inscrever:hover {
+  background: #023e8a;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* ==========================
-   RESPONSIVIDADE
-   ========================== */
-@media (max-width: 600px) { /* Ajustes para telas pequenas */
-  nav ul { /* Estilo do menu no mobile */
-    flex-direction: column;   /* Menu vira lista vertical */
-    align-items: center;      /* Centraliza links no mobile */
-  }
-}
-
-/* ==========================
-   BUTTONS INSCRICAÇÃO
-   ========================== */
-
-.prins { /* Classe para o botão de inscrição */
-  display: incline-block; /* Exibe como bloco inline */
-  width: 100%; /* Ocupa toda a largura do card */
-  padding: 5px; /* Espaçamento interno */
-  background: #ff6600; /* Laranja destaque */
-  color: white; /* Texto branco */
-  text-align: center; /* Centraliza o texto */
-  text-decoration: none; /* Remove sublinhado */
-  border-radius: 63px; /* Bordas arredondadas */
-  font-size: bold; /* Negrito */
-  cursor: pointer; /* Cursor de mãozinha */
-}
-
-/* ==========================
-   uso do active no menu
-   ========================== */
-
-nav ul li a.active { /* Estilo para o link ativo */
-    background: #d47e0e; /* Laranja mais escuro */
-    color: gray; /* Texto cinza */
-    font-weight: bold; /* Negrito */
-    border-radius: 5px; /* Bordas arredondadas */
-    padding: 6px 12px; /* Espaçamento interno */
-}
-
-/* rgb 00 red 00 green 00 blue 0.0 to 1.0 opacidade */
-
-/* ==========================
-   EVENTO PASSADO
-   ========================== */
-
-.btn-inscrever-passado {
+/* Botão desabilitado */
+.btn-inscrever.disabled {
   background-color: #ccc;
   color: #666;
   cursor: not-allowed;
@@ -322,94 +284,235 @@ nav ul li a.active { /* Estilo para o link ativo */
 
 /* Card de evento encerrado */
 .card.evento-passado {
-  opacity: 0.7; /* Deixa o card mais claro */
-  filter: grayscale(0.3); /* Aplica um leve efeito de escala de cinza */
+  opacity: 0.7;
+  filter: grayscale(0.3);
 }
 
-.btn-inscrever:hover {
-  background-color: #cc5200; /* Laranja mais escuro no hover */
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+/* ==========================
+   FORMULÁRIO
+   ========================== */
+.formulario {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.badge.seminario {
-  background-color: #28a745; /* Verde */
+.formulario label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #003366;
 }
 
-.badge.mesa-redonda {
-  background-color: #6f42c1; /* Roxo */
+.formulario input,
+.formulario select {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s;
 }
 
-.badge.oficina {
-  background-color: #e83e8c; /* Rosa forte */
-}
-
-.badge.tipo-nao-informado {
-  background-color: #6c757d; /* Cinza escuro */
-}
-
-/* ======= SEÇÃO DE CONTATO ======= */
-#contato {
-  background-color: #1E4B87;
-  color: white;
-  padding: 50px 30px;
-}
-
-#contato h2 {
-  border-left: 5px solid #F37021; /* Laranja Senac */
-  padding-left: 10px;
-  margin-bottom: 30px;
-  font-size: 1.8em;
-}
-
-#contato .contato-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  align-items: flex-start;
-}
-
-#contato .contato-info {
-  flex: 1 1 280px;
-  font-size: 1.1em;
-}
-
-#contato .contato-info p {
-  margin-bottom: 15px;
-  line-height: 1.5;
-}
-
-#contato .contato-info i {
-  color: #F37021;
-  margin-right: 8px;
-}
-
-#contato .contato-info a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-#contato .contato-info a:hover {
-  color: #F37021;
-}
-
-#contato .contato-mapa {
-  flex: 2 1 400px;
-}
-
-#contato .contato-mapa iframe {
+.formulario select {
   width: 100%;
-  height: 300px;
-  border: none;
-  border-radius: 10px;
 }
+
+.formulario input:focus,
+.formulario select:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+
+.formulario button {
+  width: 100%;
+  padding: 12px;
+  background: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.formulario button:hover {
+  background: #cc5200;
+}
+
+/* ==========================
+   RODAPÉ
+   ========================== */
+.footer {
+  background-color: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.footer p {
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* === CARROSSEL === */
+.carousel-container {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.carousel-item {
+  flex: 1 1 100%;
+  max-width: 90%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: all 0.3s ease;
+  word-wrap: break-word;
+}
+
+button.prev,
+button.next {
+  background: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  z-index: 2;
+}
+
+button.prev:hover,
+button.next:hover {
+  background: #003d82;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔵 Indicadores (bolinhas) */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.indicator.active {
+  background: #0056b3;
+}
+
+
 
 /* Responsivo */
-@media (max-width: 500px) {
-  #contato .contato-container {
-    flex-direction: column;
+@media (max-width: 600px) {
+  .carousel-item h3 {
+    font-size: 1.1rem;
   }
-  #contato .contato-mapa iframe {
-    height: 250px;
+
+  .carousel-item p {
+    font-size: 0.8rem;
+  }
+
+  .prev,
+  .next {
+    font-size: 1rem;
+  }
+
+  .prev {
+    left: 5px;
+  }
+
+  .next {
+    right: 5px;
+  }
+}
+
+
+/* ==========================
+   RESPONSIVIDADE
+   ========================== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    /* escondido por padrão */
+    flex-direction: column;
+    gap: 15px;
+    background: #003366;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  nav ul.show {
+    display: flex;
+    /* aparece quando ativado pelo JS */
   }
 }
